@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <!-- Spinner for selecting prompts -->
+        <Spinner
+            android:id="@+id/prompt_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:entries="@array/prompt_options"
+            android:gravity="center"
+            android:padding="8dp"
+            android:layout_centerHorizontal="true"/>
+
+        <!-- RecyclerView to display messages -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/bottom_layout"
+            android:layout_below="@id/prompt_spinner" />
+
+        <!-- TextView for welcome message -->
+        <TextView
+            android:id="@+id/welcome_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/prompt_spinner"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textSize="28sp"
+            android:visibility="gone" />
+
+        <!-- Bottom layout containing EditText and Button -->
+        <RelativeLayout
+            android:id="@+id/bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:padding="8dp">
+
+            <!-- EditText for typing messages -->
+            <EditText
+                android:id="@+id/message_edit_text"
+                android:layout_width="308dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="39dp"
+                android:layout_toLeftOf="@id/send_btn"
+                android:hint="Type your message here ..."
+                android:padding="16dp" />
+
+            <!-- Button to send messages -->
+            <Button
+                android:id="@+id/send_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="10dp"
+                android:padding="8dp"
+                android:text="Send" />
+
+
+        </RelativeLayout>
+</RelativeLayout>
