@@ -36,16 +36,6 @@ The project is structured as follows:
 - `screenshots`: Screenshots of the application.
 - `tests`: Unit tests for the application.
 
-## Features
-
-- Feature 1: Describe feature 1.
-- Feature 2: Describe feature 2.
-- ...
-
-## Usage
-
-Describe how to use the application or run the code. Include any prerequisites, setup instructions, and usage examples.
-
 ## Contributing
 
 Contributions are welcome! If you'd like to contribute to this project, please follow these guidelines:
